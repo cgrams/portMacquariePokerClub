@@ -1,13 +1,18 @@
-<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')"  >
-  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-    <p><button mat-button (click)="close('toggle button')">X</button></p>
-    <app-header (click)="close('toggle button')"></app-header>
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop'); open=!open;"  >
+  <mat-sidenav #sidenav (keydown.escape)="close('escape'); open=!open;" disableClose>
+    <p><button mat-button (click)="close('toggle button'); open=!open;">X</button></p>
+    <app-header (click)="close('toggle button'); open=!open;"></app-header>
   </mat-sidenav>
 
   <mat-sidenav-content>
   	<div class="pageWrapper">
 	  	<app-header></app-header>
-	    <p class="openSideNavButton"><button mat-button (click)="sidenav.open()">Open</button></p>
+	    <div id="nav-icon3" (click)="sidenav.open(); open=!open;" [ngClass]="open ? 'open' : 'openSideNavButton'">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 	    <router-outlet></router-outlet>
 	</div>
   </mat-sidenav-content>
