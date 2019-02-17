@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { NavfunctionService } from '../navfunction.service';
+ 
 
 @Component({
   selector: 'app-header',
@@ -6,25 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss','./header.mobiile.scss']
 })
 export class HeaderComponent implements OnInit {
+ 
 
-	navitems:any[];
-  constructor() {
-  	this.navitems = [
+  @HostListener('click')
+  click() { this.navfunction.open(); }
+
+  navitems:any[];
+  constructor( private navfunction: NavfunctionService ) {
+    this.navitems = [
         {
         	item: "Home",
-        	rLink: "/home"
+        	rLink: ""
         },
         {
 	        item: "About",
-            rLink: "/about"       
+          rLink: "/about"     
         },
         {
-           item: "Services",   
-           rLink:"/services"   
+          item: "Services",   
+          rLink:"/services"   
         },
         {
-           item: "Contact",
-           rLink:  "/contact"
+          item: "Contact",
+          rLink:  "/contact"
         }
      ];
    }

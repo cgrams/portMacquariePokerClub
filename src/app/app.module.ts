@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
+import { NavfunctionService } from './navfunction.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ServicesComponent } from './services/services.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ServicesComponent } from './services/services.component';
     ContactComponent,
     HomeComponent,
     HeaderComponent,
-    ServicesComponent
+    ServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { ServicesComponent } from './services/services.component';
     MatButtonModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [NavfunctionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
+import { NavfunctionService } from '../navfunction.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+	@HostBinding('class.is-open')
+  	isOpen = true;
 
-  constructor() { }
+  constructor( private navfunction: NavfunctionService ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { this.navfunction.change.subscribe(isOpen => { this.isOpen = isOpen; }); }
 
 }

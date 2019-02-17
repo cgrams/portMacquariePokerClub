@@ -1,19 +1,28 @@
-<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop'); open=!open;"  >
-  <mat-sidenav #sidenav (keydown.escape)="close('escape'); open=!open;" disableClose>
-    <p><button mat-button (click)="close('toggle button'); open=!open;">X</button></p>
-    <app-header (click)="close('toggle button'); open=!open;"></app-header>
+<mat-sidenav-container class="example-container" (backdropClick)="close(); open=!open;"  >
+  <mat-sidenav #sidenav (keydown.escape)="close(); open=!open;" disableClose>
+    <div class="mobileCloseButton" (click)="close(); open=!open;">&#10799;</div>
+    <app-header (click)="close(); open=!open;"></app-header>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="animated fadeIn">
+
+      <div id="nav-icon3" (click)="sidenav.open(); open=!open;" [ngClass]="open ? 'open' : 'openSideNavButton'">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
   	<div class="pageWrapper">
-	  	<app-header></app-header>
-	    <div id="nav-icon3" (click)="sidenav.open(); open=!open;" [ngClass]="open ? 'open' : 'openSideNavButton'">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <app-header class="showHeader"></app-header>
+      
+      <router-outlet></router-outlet>
+
+
+      <app-footer></app-footer>
+
     </div>
-	    <router-outlet></router-outlet>
-	</div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>

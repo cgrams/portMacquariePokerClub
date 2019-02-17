@@ -13,4 +13,11 @@
 
 .headerNavigationButton{
 	cursor: pointer;
+	transition: 300ms;
+}
+.headerNavigationButton:focus {
+  	outline: none;
+}
+.headerNavigationButton:hover {
+  	color: white;
 }

@@ -1,0 +1,23 @@
+ @media only screen and (min-width: 900px) {
+  #nav-icon3{
+    display: none;
+  }
+}
+ @media only screen and (max-width: 900px) {
+  .showHeader{
+    display: none;
+  }
+
+.mobileCloseButton {
+    float: right;
+    font-size: 50px;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    height: 27px;
+    line-height: 12px;
+    cursor: pointer;
+}
+
+}
