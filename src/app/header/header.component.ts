@@ -25,9 +25,13 @@ export class HeaderComponent implements OnInit {
           rLink: "/about"     
         },
         {
-          item: "Services",   
-          rLink:"/services"   
+          item: "Blog",   
+          rLink:"/blog"   
         },
+        {
+          item: "Join",   
+          rLink:"/join"   
+        },        
         {
           item: "Contact",
           rLink:  "/contact"

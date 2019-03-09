@@ -13,16 +13,25 @@
         <span></span>
       </div>
 
-  	<div class="pageWrapper">
-
-      <app-header class="showHeader"></app-header>
+  <div class="pageWrapper">
+    <app-header class="showHeader"></app-header>
+    <div class="topHomeContainer">
+      <section class="topHome">
+        <span class="topHomeSub"></span>
+        <span class="topHomeSub2"></span>
+        <span class="topHomeSub3"></span>
+      </section>
+      <img src="../assets/king.svg" />
       
-      <router-outlet></router-outlet>
-
-
-      <app-footer></app-footer>
-
     </div>
+    <div class="contentRouter">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </div>
+
+
+
 
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -16,6 +16,15 @@ import { HeaderComponent } from './header/header.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
+import { StudentListComponent } from './student-list/student-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +33,21 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     ServicesComponent,
-    FooterComponent
+    FooterComponent,
+    AddStudentComponent,
+    EditStudentComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
+    AngularFireDatabaseModule,
+        AppRoutingModule,  // Firebase database modul    
   ],
   providers: [NavfunctionService],
   bootstrap: [AppComponent]

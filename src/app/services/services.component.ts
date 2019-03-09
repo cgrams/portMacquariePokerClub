@@ -9,7 +9,7 @@ import { NavfunctionService } from '../navfunction.service';
 })
 export class ServicesComponent implements OnInit {
 	@HostBinding('class.is-open')
-  	isOpen = false;
+  	isOpen = true;
 
   constructor( private navfunction: NavfunctionService ) { }
 

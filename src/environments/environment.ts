@@ -3,8 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: true,
+    firebase: {
+	    apiKey: "AIzaSyBOywjN5vaqn1Ubay1bNZqRfxiKYotlXdI",
+	    authDomain: "portmacquariepoker.firebaseapp.com",
+	    databaseURL: "https://portmacquariepoker.firebaseio.com",
+	    projectId: "portmacquariepoker",
+	    storageBucket: "portmacquariepoker.appspot.com",
+	    messagingSenderId: "583091171576"
+    }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

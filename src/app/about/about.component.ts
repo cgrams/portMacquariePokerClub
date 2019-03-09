@@ -8,10 +8,11 @@ import { NavfunctionService } from '../navfunction.service';
 })
 export class AboutComponent implements OnInit {
 	@HostBinding('class.is-open')
-  	isOpen = false;
+  	isOpen = true;
 
   constructor( private navfunction: NavfunctionService ) { }
 
   ngOnInit() { this.navfunction.change.subscribe(isOpen => { this.isOpen = isOpen; }); }
+
 
 }
