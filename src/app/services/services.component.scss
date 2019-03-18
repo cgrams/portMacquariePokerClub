@@ -8,7 +8,7 @@
 
 :host.is-open {
   display: block;
-  color: red;
+  color: black;
   animation-name: fadeIn;
   animation-duration: 200ms;
   animation-fill-mode: both;
@@ -27,4 +27,18 @@
   0% {right:10px;}
   100% {opacity: 1;}
   100% {right:0px;}
+}
+
+h1,h2, p, ul{
+  color: white;
+}
+
+a{
+  color: white;
+  text-shadow: 1px 1px #7b8a8c;
+}
+
+section.blogSection article {
+    background: #545454;
+    padding: 20px;
 }

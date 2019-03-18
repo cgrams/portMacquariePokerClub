@@ -2,12 +2,12 @@ h1{
     color: white;
     grid-row-start: 1;
     grid-column-start:1;
-    text-shadow: 1px 1px #a78013;
+        text-shadow: 1px 1px #13a77e;
     position: relative;
     z-index: 2;
     grid-column-end: 1;
-    margin: 0 0 0 10px;
-    text-align: right;
+    margin: 0 0 0 0px;
+    text-align: left;
 }
  ul {
     list-style: none;
@@ -19,6 +19,8 @@ h1{
     grid-column-start: 2;
     grid-row-start: 1;
     align-items: center;
+        text-shadow: 1px 1px black;
+        color: white;
 }
 
  ul li {
@@ -30,7 +32,7 @@ nav {
     display: grid;
     grid-template-columns: 30% 70%;
     width: 100%;
-    margin: 20px;
+
 }
 .headerNavigationButton{
 	cursor: pointer;

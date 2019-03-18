@@ -1,3 +1,9 @@
+$imageTopMove: 50px;
+$imageWidth: 170px;
+$imageHeight: 255px;
+
+
+
 .pageWrapper{
     padding: 0;
     width: 100%;
@@ -6,17 +12,19 @@
     grid-template-columns: repeat(20, 5%);
     grid-template-rows:100px repeat(10, 200px);
 }
-
+ 
 app-header.showHeader {
     position: relative;
     z-index: 2;
     grid-row-start: 1;
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: 20;
+    display: flex;
+    align-items: center;    
 }
 .contentRouter {
     grid-column-start: 1;
-    grid-column-end: 20;
+    grid-column-end: 21;
     position: relative;
     z-index: 3;
     grid-row-start: 2;
@@ -30,8 +38,9 @@ app-header.showHeader {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-column-end: 21;
-    grid-row-end: 5;    
-    z-index: 1;    
+    grid-row-end: 6;    
+    z-index: 1;
+    background: black;    
 }
 .example-container {
   position: absolute;
@@ -43,10 +52,10 @@ app-header.showHeader {
 }
 
 .pageWrapper {
-        padding: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 #nav-icon3{
@@ -64,7 +73,7 @@ app-header.showHeader {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-      z-index: 999;
+  z-index: 999;
 }
 
  #nav-icon3 span{
@@ -132,50 +141,75 @@ app-header.showHeader {
     display: grid;
     grid-template-rows: repeat(10, 10%);
     grid-template-columns: repeat(8,12.5%);
-    position: relative;    
+    position: relative;
+    overflow: hidden;     
 }
-img {
+img.king {
     width: 100%;
+    top: $imageTopMove;
+    grid-row-start: 4;
+    position: relative;
+    z-index: 1;
+    grid-column-start: 7;
+    transform: rotate(-12deg);
+    grid-column-end: 9;
+    background: white;
+    border: 1px solid black;
+    width: $imageWidth;
+    height: $imageHeight;
+    box-shadow: 10px 10px #8080805c;    
+}
+img.ace{
+  top: $imageTopMove;
     grid-row-start: 5;
     position: relative;
     z-index: 1;
     grid-column-start: 6;
+    -webkit-transform: rotate(-12deg);
     transform: rotate(-12deg);
-        grid-column-end: 8;
+    grid-column-end: 8;
+    background: white;
+    border: 1px solid black;
+    width: $imageWidth;
+    height: $imageHeight;
+    box-shadow: 10px 10px #8080805c;
 }
+
 .topHome{
   background: #FFB75E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, red 0%, orange 25%, yellow 50%, green 75%, blue 100%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,  #3c7af5 0%, #3d6df5 25%, #7fd6f5 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: calc(150px * 5);
   transform: skewY(-12deg);
   overflow: hidden;
   transform-origin: 0;
   z-index: 0;
   width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 9;
-        grid-row-start: 1;
-            grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  top: -10px;
+  position: relative;            
 }
 
 span.topHomeSub {
   height: 100%;
-  background: -webkit-linear-gradient(to bottom, orange, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, orange, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #4a66f9, #3079f7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #4a66f9, #3079f7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: calc(100% / 6);
   position: absolute;
 }
 span.topHomeSub2 {
     width: 100%;
-    background: linear-gradient(to right, orange, #FFB75E);
+    background: linear-gradient(to right, #4a66f9, #4265f9);
     height: 200px;
     position: absolute;
     left: calc(calc(100% / 3) / 2);
 }
 span.topHomeSub3{
-  background: -webkit-linear-gradient(to bottom, #ffc7836e, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffc7836e, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  background: -webkit-linear-gradient(to bottom, #9de6da, #b7f1c9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #9de6da, #b7f1c9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
   height: 20%;
   width: 20%;
   position: absolute;

@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
- // styleUrls: ['./add-student.component.css']
+  //styleUrls: ['./add-student.component.css']
 })
 
 export class AddStudentComponent implements OnInit {
@@ -57,10 +57,15 @@ export class AddStudentComponent implements OnInit {
     this.studentForm.reset();
   }  
  
+  showSuccess: boolean = false;
+  showForm: boolean = true;
+  
   submitStudentData() {
     this.crudApi.AddStudent(this.studentForm.value); // Submit student data using CRUD API
     //this.toastr.success(this.studentForm.controls['firstName'].value + ' successfully added!'); // Show success message when data is successfully submited
     this.ResetForm();  // Reset form when clicked on reset button
+    this.showSuccess = true;
+    this.showForm = false;
    };
 
 }

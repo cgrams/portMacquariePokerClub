@@ -40,14 +40,13 @@ import { StudentListComponent } from './student-list/student-list.component';
   ],
   imports: [
     BrowserModule,
-
     BrowserAnimationsModule,
     MatButtonModule,
     MatSidenavModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
     AngularFireDatabaseModule,
-        AppRoutingModule,  // Firebase database modul    
+    AppRoutingModule,  // Firebase database modul    
   ],
   providers: [NavfunctionService],
   bootstrap: [AppComponent]

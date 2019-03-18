@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Output, HostListener, EventEmitter } from '@angular/core';
 import { NavfunctionService } from '../navfunction.service';
  
 
@@ -9,7 +9,6 @@ import { NavfunctionService } from '../navfunction.service';
 })
 export class HeaderComponent implements OnInit {
  
-
   @HostListener('click')
   click() { this.navfunction.open(); }
 
@@ -25,11 +24,11 @@ export class HeaderComponent implements OnInit {
           rLink: "/about"     
         },
         {
-          item: "Blog",   
+          item: "Archive",   
           rLink:"/blog"   
         },
         {
-          item: "Join",   
+          item: "Homegames",   
           rLink:"/join"   
         },        
         {
@@ -39,6 +38,28 @@ export class HeaderComponent implements OnInit {
      ];
    }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+
+  }
+
+
+  @Output() msgEvent = new EventEmitter<object>();
+
+  emitChild(){
+    let random1;
+    let random2;
+    random1 = Math.ceil(Math.random() * 13) ; 
+    random2 = Math.ceil(Math.random() * 13) ;
+
+    this.msgEvent.emit({ firstCard: random1, secondCard: random2 });
+
+    console.log("this is random II: " + random2);
+    console.log("this is random I: " + random1);
+
+    }
+ 
+
+
 
 }

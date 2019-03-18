@@ -1,7 +1,24 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close(); open=!open;"  >
   <mat-sidenav #sidenav (keydown.escape)="close(); open=!open;" disableClose>
     <div class="mobileCloseButton" (click)="close(); open=!open;">&#10799;</div>
-    <app-header (click)="close(); open=!open;"></app-header>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/blog">Archive</a>
+      </li>
+      <li>
+        <a href="/join">Homegames</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+
+    </ul>
   </mat-sidenav>
 
   <mat-sidenav-content class="animated fadeIn">
@@ -14,18 +31,45 @@
       </div>
 
   <div class="pageWrapper">
-    <app-header class="showHeader"></app-header>
+    <app-header class="showHeader" (msgEvent)="receiveValue($event)" (msgEvent)="receiveValue1($event)" ></app-header>
     <div class="topHomeContainer">
       <section class="topHome">
         <span class="topHomeSub"></span>
         <span class="topHomeSub2"></span>
         <span class="topHomeSub3"></span>
       </section>
-      <img src="../assets/king.svg" />
-      
+      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 1"/>
+      <img class="king" src="../assets/2.png" *ngIf="pcdata1 === 2"  >      
+      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 3"/>
+      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 4"  >      
+      <img class="king" src="../assets/5.png" *ngIf="pcdata1 === 5"/>
+      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 6"  >      
+      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 7"/>
+      <img class="king" src="../assets/8.png" *ngIf="pcdata1 === 8"  >      
+      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 9"/>
+      <img class="king" src="../assets/10.png" *ngIf="pcdata1 === 10"  >
+      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 11"/>
+      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 12"  >
+      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 13"  >
+
+      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 1"/>
+      <img class="ace" src="../assets/2.png" *ngIf="pcdata2 === 2"  >      
+      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 3"/>
+      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 4"  >      
+      <img class="ace" src="../assets/5.png" *ngIf="pcdata2 === 5"/>
+      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 6"  >      
+      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 7"/>
+      <img class="ace" src="../assets/8.png" *ngIf="pcdata2 === 8"  >      
+      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 9"/>
+      <img class="ace" src="../assets/10.png" *ngIf="pcdata2 === 10"  >
+      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 11"/>
+      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 12"  >
+      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 13"  >
+
     </div>
     <div class="contentRouter">
       <router-outlet></router-outlet>
+      
     </div>
     <app-footer></app-footer>
   </div>

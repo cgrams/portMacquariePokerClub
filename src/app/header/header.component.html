@@ -1,8 +1,9 @@
 <nav>
 	<h1>Port Macquarie Poker Club</h1>
-	<ul class="headerList">
+	<ul class="headerList" (click)="emitChild()">
 		<li *ngFor="let navitem of navitems">
 			<div class="headerNavigationButton" routerLink="{{navitem.rLink}}">{{navitem.item}}</div>
 		</li>
 	</ul>
+
 </nav>
