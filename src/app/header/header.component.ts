@@ -8,7 +8,7 @@ import { NavfunctionService } from '../navfunction.service';
   styleUrls: ['./header.component.scss','./header.mobiile.scss']
 })
 export class HeaderComponent implements OnInit {
- 
+
   @HostListener('click')
   click() { this.navfunction.open(); }
 
@@ -38,25 +38,16 @@ export class HeaderComponent implements OnInit {
      ];
    }
 
-  ngOnInit() {
+  ngOnInit(){}
 
-
-  }
 
 
   @Output() msgEvent = new EventEmitter<object>();
 
   emitChild(){
-    let random1;
-    let random2;
-    random1 = Math.ceil(Math.random() * 13) ; 
-    random2 = Math.ceil(Math.random() * 13) ;
-
+    let random1 = Math.ceil(Math.random() * 13);
+    let random2 = Math.ceil(Math.random() * 13);
     this.msgEvent.emit({ firstCard: random1, secondCard: random2 });
-
-    console.log("this is random II: " + random2);
-    console.log("this is random I: " + random1);
-
     }
  
 

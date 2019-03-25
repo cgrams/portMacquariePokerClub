@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 import { NavfunctionService } from './navfunction.service';
 
@@ -24,6 +26,9 @@ import { environment } from '../environments/environment';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { DirectionsComponent } from './directions/directions.component';
+import { Directions2Component } from './directions2/directions2.component';
+import { Article1Component } from './services/articles/article1/article1.component';
 
 @NgModule({
   declarations: [
@@ -36,19 +41,25 @@ import { StudentListComponent } from './student-list/student-list.component';
     FooterComponent,
     AddStudentComponent,
     EditStudentComponent,
-    StudentListComponent
+    StudentListComponent,
+    DirectionsComponent,
+    Directions2Component,
+    Article1Component
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatSidenavModule,
+    MatDialogModule,
+    MatCardModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
     AngularFireDatabaseModule,
     AppRoutingModule,  // Firebase database modul    
   ],
   providers: [NavfunctionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DirectionsComponent, Directions2Component]
 })
 export class AppModule { }

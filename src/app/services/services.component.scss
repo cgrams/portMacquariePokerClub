@@ -37,8 +37,24 @@ a{
   color: white;
   text-shadow: 1px 1px #7b8a8c;
 }
-
+.blogSection mat-card.mat-card {
+    grid-column-start: 2;
+}
+mat-card.mat-card {
+    border: 3px solid #b0e3d6;
+}
 section.blogSection article {
-    background: #545454;
+    background: #5454548c;
     padding: 20px;
+}
+
+img.blogImage {
+    width: 235px;
+    float: left;
+    margin: 0 10px 0 0;
+    filter: brightness(226%);
+}
+
+#articleHide, #articleHide2{
+  display: none;
 }

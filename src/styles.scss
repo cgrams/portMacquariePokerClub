@@ -64,7 +64,6 @@ button {
 article.joinArticle {
     grid-column-start: 3;
 }
-
-mat-sidenav-container.example-container.mat-drawer-container.mat-sidenav-container {
-    background: black;
+.mat-drawer-container {
+    background-color: white;
 }

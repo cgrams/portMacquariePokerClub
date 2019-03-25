@@ -1,24 +1,13 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close(); open=!open;"  >
   <mat-sidenav #sidenav (keydown.escape)="close(); open=!open;" disableClose>
     <div class="mobileCloseButton" (click)="close(); open=!open;">&#10799;</div>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <li>
-        <a href="/blog">Archive</a>
-      </li>
-      <li>
-        <a href="/join">Homegames</a>
-      </li>
-      <li>
-        <a href="/contact">Contact</a>
-      </li>
-
-    </ul>
+      <nav>
+        <ul class="headerList">
+          <li *ngFor="let navitem of navitems">
+            <div class="headerNavigationButton" routerLink="{{navitem.rLink}}">{{navitem.item}}</div>
+          </li>
+        </ul>
+      </nav>
   </mat-sidenav>
 
   <mat-sidenav-content class="animated fadeIn">
@@ -38,44 +27,66 @@
         <span class="topHomeSub2"></span>
         <span class="topHomeSub3"></span>
       </section>
-      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 1"/>
-      <img class="king" src="../assets/2.png" *ngIf="pcdata1 === 2"  >      
-      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 3"/>
-      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 4"  >      
-      <img class="king" src="../assets/5.png" *ngIf="pcdata1 === 5"/>
-      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 6"  >      
-      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 7"/>
-      <img class="king" src="../assets/8.png" *ngIf="pcdata1 === 8"  >      
-      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 9"/>
-      <img class="king" src="../assets/10.png" *ngIf="pcdata1 === 10"  >
-      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 11"/>
-      <img class="king" src="../assets/ace.svg" *ngIf="pcdata1 === 12"  >
-      <img class="king" src="../assets/king.svg" *ngIf="pcdata1 === 13"  >
+      <img class="king animated flipInY" src="../assets/ace.svg" *ngIf="pcdata1 === 1"/>
+      <img class="king animated flipInY" src="../assets/2.svg" *ngIf="pcdata1 === 2"  >      
+      <img class="king animated flipInY" src="../assets/3.svg" *ngIf="pcdata1 === 3"/>
+      <img class="king animated flipInY" src="../assets/4.png" *ngIf="pcdata1 === 4"  >      
+      <img class="king animated flipInY" src="../assets/5.png" *ngIf="pcdata1 === 5"/>
+      <img class="king animated flipInY" src="../assets/6.png" *ngIf="pcdata1 === 6"  >      
+      <img class="king animated flipInY" src="../assets/7.png" *ngIf="pcdata1 === 7"/>
+      <img class="king animated flipInY" src="../assets/8.svg" *ngIf="pcdata1 === 8"  >      
+      <img class="king animated flipInY" src="../assets/9.svg" *ngIf="pcdata1 === 9"/>
+      <img class="king animated flipInY" src="../assets/10.svg" *ngIf="pcdata1 === 10"  >
+      <img class="king animated flipInY" src="../assets/jack.svg" *ngIf="pcdata1 === 11"/>
+      <img class="king animated flipInY" src="../assets/queen.png" *ngIf="pcdata1 === 12"  >
+      <img class="king animated flipInY" src="../assets/king.svg" *ngIf="pcdata1 === 13"  >
 
-      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 1"/>
-      <img class="ace" src="../assets/2.png" *ngIf="pcdata2 === 2"  >      
-      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 3"/>
-      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 4"  >      
-      <img class="ace" src="../assets/5.png" *ngIf="pcdata2 === 5"/>
-      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 6"  >      
-      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 7"/>
-      <img class="ace" src="../assets/8.png" *ngIf="pcdata2 === 8"  >      
-      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 9"/>
-      <img class="ace" src="../assets/10.png" *ngIf="pcdata2 === 10"  >
-      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 11"/>
-      <img class="ace" src="../assets/ace.svg" *ngIf="pcdata2 === 12"  >
-      <img class="ace" src="../assets/king.svg" *ngIf="pcdata2 === 13"  >
+      <img class="ace animated flipInY" src="../assets/ace.svg" *ngIf="pcdata2 === 1"/>
+      <img class="ace animated flipInY" src="../assets/2.svg" *ngIf="pcdata2 === 2"  >      
+      <img class="ace animated flipInY" src="../assets/3.svg" *ngIf="pcdata2 === 3"/>
+      <img class="ace animated flipInY" src="../assets/4.png" *ngIf="pcdata2 === 4"  >      
+      <img class="ace animated flipInY" src="../assets/5.png" *ngIf="pcdata2 === 5"/>
+      <img class="ace animated flipInY" src="../assets/6.png" *ngIf="pcdata2 === 6"  >      
+      <img class="ace animated flipInY" src="../assets/7.png" *ngIf="pcdata2 === 7"/>
+      <img class="ace animated flipInY" src="../assets/8.svg" *ngIf="pcdata2 === 8"  >      
+      <img class="ace animated flipInY" src="../assets/9.svg" *ngIf="pcdata2 === 9"/>
+      <img class="ace animated flipInY" src="../assets/10.svg" *ngIf="pcdata2 === 10"  >
+      <img class="ace animated flipInY" src="../assets/jack.svg" *ngIf="pcdata2 === 11"/>
+      <img class="ace animated flipInY" src="../assets/queen.png" *ngIf="pcdata2 === 12"  >
+      <img class="ace animated flipInY" src="../assets/king.svg" *ngIf="pcdata2 === 13"  >
 
     </div>
     <div class="contentRouter">
-      <router-outlet></router-outlet>
-      
+      <router-outlet></router-outlet> 
     </div>
-    <app-footer></app-footer>
+
+
+<div class="sideArtilesHist" >
+  <h3>Recent Articles</h3>
+  <ul>
+     <li (click)="gotoLink(homeLink)">March 10 /2019</li>
+     <li (click)="gotoLink(homeLink)">March 10 /2019</li>
+     <li (click)="gotoLink(homeLink)">March 10 /2019</li>
+     <li (click)="gotoLink(homeLink)">March 10 /2019</li>
+     <li (click)="gotoLink(homeLink)">March 10 /2019</li>
+  </ul>
+</div>
+
+<div class="whereToGo">
+  <h3>Where We Play</h3>
+  <div (click)="openDialog()" class="pantersButton hoverChangeBackgound">
+    <h4 >Friday Night</h4>
+    <h4><strong>Panters</strong></h4>
+  </div>
+  <div (click)="openDialog2()" class="golfButton hoverChangeBackgound animated">
+    <h4>Saturday and Sunday</h4> 
+    <h4><strong>Golf Club</strong></h4>
+  </div>
+</div>
   </div>
 
-
-
-
+  <app-footer></app-footer>  
   </mat-sidenav-content>
+ 
 </mat-sidenav-container>
+
