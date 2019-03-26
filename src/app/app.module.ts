@@ -29,6 +29,10 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { DirectionsComponent } from './directions/directions.component';
 import { Directions2Component } from './directions2/directions2.component';
 import { Article1Component } from './services/articles/article1/article1.component';
+import { Article2Component } from './services/articles/article2/article2.component';
+import { Article3Component } from './services/articles/article3/article3.component';
+import { Article4Component } from './services/articles/article4/article4.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { Article1Component } from './services/articles/article1/article1.compone
     StudentListComponent,
     DirectionsComponent,
     Directions2Component,
-    Article1Component
+    Article1Component,
+    Article2Component,
+    Article3Component,
+    Article4Component,
+
   ],
   imports: [
     BrowserModule,

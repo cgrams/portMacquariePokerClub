@@ -5,7 +5,10 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 
-import { Article1Component } from './services/articles/article1/article1.component'
+import { Article1Component } from './services/articles/article1/article1.component';
+import { Article2Component } from './services/articles/article2/article2.component';
+import { Article3Component } from './services/articles/article3/article3.component';
+import { Article4Component } from './services/articles/article4/article4.component';
 
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -16,11 +19,26 @@ const routes: Routes = [
  
   { path:'sideArchive', component: Article1Component, children:[
         {path: '', component: ServicesComponent },
-        {path: 'march-12', component: Article1Component}
+        {path: 'march-12', component: Article1Component}    
       ]
   },
-   
+   { path:'sideArchive', component: Article2Component, children:[
+        {path: '', component: ServicesComponent },
+        {path: 'march-5', component: Article2Component}        
+      ]
+  },  
 
+   { path:'sideArchive', component: Article3Component, children:[
+        {path: '', component: ServicesComponent },
+        {path: 'feb-25', component: Article3Component}        
+      ]
+  },
+
+   { path:'sideArchive', component: Article4Component, children:[
+        {path: '', component: ServicesComponent },
+        {path: 'feb-18', component: Article4Component}        
+      ]
+  },
  	{ path: 'join', component: AddStudentComponent },
  	{ path: 'view-students', component: StudentListComponent },
  	{ path: 'edit-student/:id', component: EditStudentComponent },

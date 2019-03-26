@@ -60,6 +60,10 @@ export class AppComponent {
 
  
 homeLink:string = "/sideArchive/march-12";
+homeLink2:string = "/sideArchive/march-5";
+homeLink3:string = "/sideArchive/feb-25";
+homeLink4:string = "/sideArchive/feb-18";
+
 gotoLink(_url:string){
     this.router.navigateByUrl(_url);
   }

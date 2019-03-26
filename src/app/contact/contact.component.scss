@@ -8,7 +8,7 @@
 
 :host.is-open {
   display: block;
-  color: red;
+  color: white;
   animation-name: fadeIn;
   animation-duration: 200ms;
   animation-fill-mode: both;
@@ -29,7 +29,9 @@
   100% {right:0px;}
 }
 
-ul li a{
+ul li a, ul li{
   color: white;
-      text-shadow: 1px 1px #13a77e;
+  font-size: 1.2em;
+  text-shadow: 1px 1px #13a77e;
+  line-height: 3;
 }
