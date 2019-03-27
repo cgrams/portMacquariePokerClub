@@ -45,8 +45,8 @@ export class HeaderComponent implements OnInit {
   @Output() msgEvent = new EventEmitter<object>();
 
   emitChild(){
-    let random1 = Math.ceil(Math.random() * 13);
-    let random2 = Math.ceil(Math.random() * 13);
+    let random1 = Math.ceil(Math.random() * 52);
+    let random2 = Math.ceil(Math.random() * 52);
     this.msgEvent.emit({ firstCard: random1, secondCard: random2 });
     }
  

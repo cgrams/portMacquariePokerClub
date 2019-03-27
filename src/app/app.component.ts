@@ -23,10 +23,9 @@ export class AppComponent {
 
 	pcdata1:number;
  	pcdata2:number;
-
-
 	receiveValue1( $event){ this.pcdata1 = $event.secondCard; }
  	receiveValue( $event){ this.pcdata2 = $event.firstCard; }
+
 
 	@HostListener('click')
 	click() { this.navfunction.open(); }
@@ -39,20 +38,20 @@ export class AppComponent {
 	    	rLink: ""
 	    },
 	    {
-	        item: "About",
-	      rLink: "/about"     
+	    	item: "About",
+	    	rLink: "/about"     
 	    },
 	    {
-	      item: "Archive",   
-	      rLink:"/blog"   
+	    	item: "Archive",   
+	    	rLink:"/blog"   
 	    },
 	    {
-	      item: "Homegames",   
-	      rLink:"/join"   
+	    	item: "Homegames",   
+	    	rLink:"/join"   
 	    },        
 	    {
-	      item: "Contact",
-	      rLink:  "/contact"
+	    	item: "Contact",
+	    	rLink:  "/contact"
 	    }
 	 ];
 	}
