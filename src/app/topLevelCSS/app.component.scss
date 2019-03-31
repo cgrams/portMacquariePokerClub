@@ -377,12 +377,17 @@ span.topHomeSub3{
     transform: translate3d(0, -4px, 0);
   }
 }
- 
+
+.pantersButton.hoverChangeBackgound, .golfButton.hoverChangeBackgound.animated {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .hoverChangeBackgound h4 strong:hover{
-animation-name: bounce;
+  animation-name: bounce;
   transform-origin: center bottom;
-    animation-duration: 1s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 app-footer {

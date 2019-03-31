@@ -21,32 +21,8 @@ export class ServicesComponent implements OnInit {
   ngOnInit() { 
 
   	this.navfunction.change.subscribe(isOpen => { this.isOpen = isOpen; }); 
-
-
  
- 
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        console.log('in view');
-
-        setTimeout(function(){ 
-        document.getElementById('articleHideNew').style.display = "block";
-        document.getElementById('articleHideNew2').style.display = "block";
-        document.getElementById('articleHideNew3').style.display = "block";
+}
 
 
-         }, 300);
-        
-      }
-    });
-  });
-
-  observer.observe(document.querySelector('#infinite-scroll-trigger'));
- 
-
-
-
-	}
 }

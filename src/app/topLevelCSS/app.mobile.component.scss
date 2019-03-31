@@ -7,7 +7,10 @@
   .showHeader{
     display: none;
   }
-
+.whereToGo[_ngcontent-c0] {
+    grid-column-start: 1;
+    grid-column-end: 21;
+}
 .mobileCloseButton {
     float: right;
     font-size: 50px;
@@ -39,43 +42,29 @@
 .sideArtilesHist ul li {
     font-size: 14px;
 }
+
+.mat-drawer-inner-container {
+    width: 100vw;
+    text-align: center;
+}
 }
 
 @media only screen and (max-width: 938px) {
-.sideArtilesHist {
-    grid-column-end: 20;
-    width: 100%;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    z-index: 9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to right, #78ffd675, #91d3f2);
-    justify-content: center;
-    height: 85px;
-        transform: skewY(0deg);
-}
-.sideArtilesHist ul{
-    list-style: none;
-    -webkit-transform: skewY(12deg);
-    transform: skewY(0deg);
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.sideArtilesHist h3{
-      transform: skewY(0deg);
-      margin: 10px;
-}
-.contentRouter[_ngcontent-c0] {
-    grid-column-start: 1;
-    grid-column-end: 21;
-    position: relative;
-    z-index: 3;
-    grid-row-start: 3;
-    padding: 0 5%;
-}
+    .sideArtilesHist {
+        display: none;
+    }
+    .contentRouter {
+        grid-column-start: 1;
+        grid-column-end: 21;
+        position: relative;
+        z-index: 3;
+        grid-row-start: 2;
+        padding: 0 5%;
+    }
+    .whereToGo{ 
+        grid-row-start: 6; 
+        margin: 0 20px 30px 20px;
+        padding: 10px;
+    }
+
 }

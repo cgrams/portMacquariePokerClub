@@ -75,6 +75,14 @@ gotoLink(_url:string){
         this.dialog.open(DirectionsComponent, dialogConfig);
     }
 
+mouseEnterDirections1(div : string){
+console.log(div);	
+}
+mouseEnterDirections2(div : string){
+console.log(div);	
+}
+
+
  openDialog2() {
         const dialogConfig = new MatDialogConfig();
         dialogConfig.disableClose = false;

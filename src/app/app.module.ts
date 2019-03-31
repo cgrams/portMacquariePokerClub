@@ -32,6 +32,7 @@ import { Article1Component } from './services/articles/article1/article1.compone
 import { Article2Component } from './services/articles/article2/article2.component';
 import { Article3Component } from './services/articles/article3/article3.component';
 import { Article4Component } from './services/articles/article4/article4.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { Article4Component } from './services/articles/article4/article4.compone
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
     AngularFireDatabaseModule,
-    AppRoutingModule,  // Firebase database modul    
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),  // Firebase database modul    
   ],
   providers: [NavfunctionService],
   bootstrap: [AppComponent],

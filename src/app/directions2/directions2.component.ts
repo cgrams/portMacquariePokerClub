@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from "@angular/material";
 
 @Component({
   selector: 'app-directions2',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Directions2Component implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<Directions2Component>) { }
 
   ngOnInit() {
   }
+
+	close(){
+		this.dialogRef.close();
+	}
 
 }
