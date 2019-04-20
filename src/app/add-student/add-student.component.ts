@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../shared/crud.service';    // CRUD services API
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'; // Reactive form services
  
-
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-add-student',
@@ -16,7 +16,7 @@ export class AddStudentComponent implements OnInit {
   constructor(
     public crudApi: CrudService,  // CRUD API services
     public fb: FormBuilder,       // Form Builder service for Reactive forms
- 
+   
   ) { }
 
  

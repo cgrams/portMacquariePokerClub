@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 
+import * as lozad from 'lozad';
+
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
@@ -33,6 +35,9 @@ import { Article2Component } from './services/articles/article2/article2.compone
 import { Article3Component } from './services/articles/article3/article3.component';
 import { Article4Component } from './services/articles/article4/article4.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { Article5Component } from './services/articles/article5/article5.component';
+import { Article6Component } from './services/articles/article6/article6.component';
+import { Article7Component } from './services/articles/article7/article7.component';
 
 
 @NgModule({
@@ -53,6 +58,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     Article2Component,
     Article3Component,
     Article4Component,
+    Article5Component,
+    Article6Component,
+    Article7Component,
 
   ],
   imports: [

@@ -19,10 +19,9 @@ export class ServicesComponent implements OnInit {
   constructor( private navfunction: NavfunctionService ) { }
 
   ngOnInit() { 
-
   	this.navfunction.change.subscribe(isOpen => { this.isOpen = isOpen; }); 
- 
-}
+	}
+
 
 
 }

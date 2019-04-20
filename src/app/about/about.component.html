@@ -1,8 +1,9 @@
 <section class="aboutSection">
 	<h1>Club Goals</h1>
-	<ul>
-		<li>This club is looking to start home games</li>
-		<li>Grow enthusism for local poker</li>
-		<li>Improve the skills of the members</li>		
+	<ul>	
+		<li *ngFor="let goal of goals; let i = index" (click)="toggleGoals(goal)" id="goal{{i}}" >
+			<div id="makeBiggerFont">{{ i + 1 }}) {{goal.goalShort}}: </div>
+			<span class="animated flipInX" [hidden]="goal.goalHidden">&#8594; {{goal.goalLong}}</span>
+		</li>
 	</ul>
 </section>

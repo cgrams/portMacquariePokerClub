@@ -7,3 +7,20 @@ h1.h2, form {
     color: white;
     text-shadow: 1px 1px 1px black;
 }
+
+
+@media only screen and (max-width: 1200px) {
+	.joinContent {
+	    grid-template-columns: 100%;
+	}
+	form{
+    	grid-row-start: 2;
+    	    	margin-top: 3%;
+	}
+	article.joinArticle {
+    	grid-column-start: 1;
+
+	}
+}
+
+

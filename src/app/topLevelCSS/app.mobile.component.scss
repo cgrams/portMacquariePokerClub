@@ -7,7 +7,7 @@
   .showHeader{
     display: none;
   }
-.whereToGo[_ngcontent-c0] {
+.whereToGo {
     grid-column-start: 1;
     grid-column-end: 21;
 }
@@ -22,16 +22,17 @@
     line-height: 12px;
     cursor: pointer;
 }
+
   ul {
     padding: 10px;
-    width: 100%;
+    width: 200px;
     margin: 20px;
     list-style: none;
     height: 50vh;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
@@ -55,11 +56,11 @@
     }
     .contentRouter {
         grid-column-start: 1;
-        grid-column-end: 21;
+        grid-column-end: 20;
         position: relative;
         z-index: 3;
         grid-row-start: 2;
-        padding: 0 5%;
+        padding: 0%;
     }
     .whereToGo{ 
         grid-row-start: 6; 

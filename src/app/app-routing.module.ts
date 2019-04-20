@@ -9,6 +9,8 @@ import { Article1Component } from './services/articles/article1/article1.compone
 import { Article2Component } from './services/articles/article2/article2.component';
 import { Article3Component } from './services/articles/article3/article3.component';
 import { Article4Component } from './services/articles/article4/article4.component';
+import { Article5Component } from './services/articles/article5/article5.component';
+import { Article6Component } from './services/articles/article6/article6.component';
 
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -16,12 +18,24 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
+
+  { path:'sideArchive', component: Article6Component, children:[
+        {path: '', component: ServicesComponent },
+        {path: 'april-12', component: Article6Component}    
+      ]
+  },
  
   { path:'sideArchive', component: Article1Component, children:[
         {path: '', component: ServicesComponent },
         {path: 'march-12', component: Article1Component}    
       ]
   },
+   { path:'sideArchive', component: Article5Component, children:[
+        {path: '', component: ServicesComponent },
+        {path: 'april-5', component: Article5Component}        
+      ]
+  },  
+
    { path:'sideArchive', component: Article2Component, children:[
         {path: '', component: ServicesComponent },
         {path: 'march-5', component: Article2Component}        

@@ -14,5 +14,4 @@ export class ContactComponent implements OnInit {
 
 	ngOnInit() { this.navfunction.change.subscribe(isOpen => { this.isOpen = isOpen; }); }
 
-
 }

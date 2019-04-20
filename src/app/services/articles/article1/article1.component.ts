@@ -9,7 +9,6 @@ export class Article1Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

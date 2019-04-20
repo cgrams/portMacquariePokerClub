@@ -33,3 +33,91 @@
 h1, ul{
   color: white;
  }
+
+ ul {
+    padding: 0 7px;
+    list-style: none;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#makeBiggerFont {
+    border: 1px solid white;
+    padding: 6px;
+    background: none;
+    margin: 10px;
+    width: 200px;
+
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+@keyframes goalsAnimation {
+  from { letter-spacing: normal; color: white}
+  to { letter-spacing: 1px; color: #e6e6e6}
+}
+
+#goal0:hover #makeBiggerFont, #goal1:hover #makeBiggerFont, #goal2:hover #makeBiggerFont {
+  animation: goalsAnimation;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: .3s;
+  cursor: pointer;
+}
+
+
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+@media only screen and (max-width: 600px) {
+  ul li{
+display: block;
+  }
+  ul{
+    height: 100px;
+  }
+span.animated.flipInX {
+    position: relative;
+    left: 10px;
+}
+
+}
+

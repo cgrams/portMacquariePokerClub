@@ -29,11 +29,7 @@
   100% {right:0px;}
 }
 
-article.weeklyarticlemainpage {
-    width: 66%;
-    color: white;
-    text-shadow: 1px 1px #13a77e;    
-}
+ 
 h2 {
     color: white;
     font-weight: bold;
@@ -44,11 +40,53 @@ h2 {
 @media only screen and (max-width: 938px) {
 
   article.weeklyarticlemainpage {
-      width: 100%;
-      color: white;
-      text-shadow: 1px 1px #13a77e;
-      text-align: justify;
+width: 100%;
+    color: white;
+    text-shadow: 1px 1px #13a77e;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
   }
+.weeklyarticlemainpage ul {
+    padding: 0;
+}
+
+}
 
 
+
+article{
+    background: #5454548c;
+    padding: 23px;
+}
+
+h1,h2, p, ul{
+  color: white;
+}
+
+a{
+  color: white;
+  text-shadow: 1px 1px #7b8a8c;
+}
+.blogSection mat-card.mat-card {
+    grid-column-start: 2;
+}
+mat-card.mat-card {
+    border: 3px solid #b0e3d6;
+}
+section.blogSection article {
+    background: #5454548c;
+    padding: 20px;
+}
+article p, aside, li{
+  text-shadow: 1px 1px 1px black;
+}
+aside{
+  color: white;
+}
+img.blogImage {
+    width: 235px;
+    float: left;
+    margin: 0 10px 0 0;
 }

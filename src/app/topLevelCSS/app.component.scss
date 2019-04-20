@@ -91,7 +91,10 @@ app-header.showHeader {
   padding: 3px;
   border-radius: 3px;
   box-shadow: 1px 2px 1px 1px grey;
-    cursor: pointer; 
+  cursor: pointer; 
+}
+.sideArtilesHist li:hover{
+box-shadow: 1px 3px 2px 2px grey;
 }
 
 .sideArtilesHist h3{
@@ -152,7 +155,7 @@ app-header.showHeader {
   right: 5px;
   top: 5px;
   height: 40px;
-  position: absolute;
+  position: fixed;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -399,4 +402,10 @@ app-footer {
   z-index: 99999;
   background: #3584f37a;
   padding: 4px 0;    
+}
+
+
+#nav-icon3 span{
+    background: white;
+        border: 2px solid #b2efcc;
 }
